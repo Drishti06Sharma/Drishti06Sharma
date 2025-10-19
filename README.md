@@ -1,23 +1,91 @@
-## Hi there 👋
+<h1 align="center">👋 Hi, I'm <span style="color:#4CAF50;">Drishti Sharma</span></h1>
+<h3 align="center">💻 Passionate Learner | 🐧 Linux Enthusiast | 🌱 Developer from Dehradun</h3>
 
-<h1 align="center">Hi 👋, I'm Drishti Sharma</h1>
-<h3 align="center">A passionate in learning new tech stuff and currently being a student , seek to learn more...</h3>
+---
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=drishti06sharma&label=Profile%20views&color=0e75b6&style=flat" alt="drishti06sharma" /> </p>
+### 📫 About Me  
+- 🏠 From **Dehradun, India**  
+- ✉️ Reach me at: **[20drishti06@gmail.com](mailto:20drishti06@gmail.com)**  
+- 🧠 Currently learning **Linux System Administration** & **C Programming**  
+- 💬 Ask me about **Linux**, **Shell scripting**, and **C fundamentals**  
+- ⚡ Fun fact: I love solving real-world problems through small automations!  
 
-- 📫 How to reach me **sdrishti404@gmail.com**
+---
 
-<h3 align="left">Connect with me:</h3>
-<p align="left">
-<a href="https://twitter.com/@Drishti06Sharma" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="@drishti06sharma" height="30" width="40" /></a>
-<a href="https://linkedin.com/in/Drishti Sharma" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="drishti sharma" height="30" width="40" /></a>
-<a href="https://instagram.com/s.drishti_06" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="s.drishti_06" height="30" width="40" /></a>
+## 🚀 Featured Repositories  
+
+### 🐧 **Linux Learning & Scripting**
+| Repository | Description | Language |
+|-------------|-------------|-----------|
+| [LINUX_LEARNING](https://github.com/Drishti06Sharma/LINUX_LEARNING) | 📘 Learn Linux from basics to advanced through Q&A and practice sets. | 🐚 Shell |
+| [LINUX](https://github.com/Drishti06Sharma/LINUX) | ⚙️ Hands-on Linux scripts & configuration practice. | 🐚 Shell |
+
+---
+
+### 💻 **Programming & Practice**
+| Repository | Description | Language |
+|-------------|-------------|-----------|
+| [100-days-of-code](https://github.com/Drishti06Sharma/100-days-of-code) | 💪 My journey of consistent coding and problem-solving! | 🧠 C |
+
+---
+
+### 🧩 **Personal Repository**
+| Repository | Description | Language |
+|-------------|-------------|-----------|
+| [Drishti06Sharma](https://github.com/Drishti06Sharma/Drishti06Sharma) | 🏡 My GitHub profile repository — the central hub of all my projects! | 📄 Markdown |
+
+---
+
+### 🔒 **Private Projects**
+> Some of my ongoing and experimental projects that are still under development 👇  
+
+| Repository | Description | Status |
+|-------------|-------------|--------|
+| 🧠 **PROJECT-IDEAS..** | 💡 A private collection of unique project ideas, upcoming concepts, and prototypes in progress. | 🔐 Private |
+
+---
+
+## 🧠 Tech Stack
+**Languages:**  
+`C` • `Shell Scripting` • `HTML` • `CSS` • `JavaScript`  
+
+**Tools & Platforms:**  
+`Linux` • `Git` • `VS Code` • `Terminal`  
+
+---
+
+## 📈 GitHub Stats & Activity  
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=Drishti06Sharma&show_icons=true&theme=tokyonight&hide_border=true" height="165" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Drishti06Sharma&theme=tokyonight&hide_border=true" height="165" />
 </p>
 
-<h3 align="left">Languages and Tools:</h3>
-<p align="left"> <a href="https://www.cprogramming.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg" alt="c" width="40" height="40"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a> </p>
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Drishti06Sharma&layout=compact&theme=tokyonight&hide_border=true" height="165" />
+</p>
 
-<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=drishti06sharma&show_icons=true&locale=en" alt="drishti06sharma" /></p>
+---
 
+## 🪶 Contribution Graph  
+
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Drishti06Sharma&theme=tokyo-night&hide_border=true" alt="Contribution Graph" />
+</p>
+
+---
+
+## 🌐 Connect With Me  
+
+<p align="center">
+  <a href="mailto:20drishti06@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"></a>
+  <a href="https://github.com/Drishti06Sharma"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a>
+  <a href="#"><img src="https://img.shields.io/badge/Dehradun🌄-Location-green?style=for-the-badge"></a>
+</p>
+
+---
+
+> ✨ “Every great developer you know started as a beginner who never gave up.” ✨
+```
 
 
