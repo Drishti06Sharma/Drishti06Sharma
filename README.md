@@ -54,18 +54,6 @@
 
 ---
 
-## 📈 GitHub Stats & Activity  
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Drishti06Sharma&show_icons=true&theme=tokyonight&hide_border=true" height="165" />
-</p>
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Drishti06Sharma&layout=compact&theme=tokyonight&hide_border=true" height="165" />
-</p>
-
----
-
 
 ## 🌐 Connect With Me  
 
