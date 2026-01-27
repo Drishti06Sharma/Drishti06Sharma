@@ -79,10 +79,10 @@ I am a motivated Computer Science student with a strong interest in programming,
 
 ## 📊 GitHub Stats
 
+![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=Drishti06Sharma)
 ![Drishti's GitHub Stats](https://github-readme-stats.vercel.app/api?username=Drishti06Sharma\&show_icons=true)
 ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Drishti06Sharma\&layout=compact)
 
 ---
 
 ✨ Thank you for visiting my profile. Feel free to explore my repositories and connect!
-
