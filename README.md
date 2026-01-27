@@ -1,71 +1,88 @@
-<h1 align="center">👋 Hi, I'm <span style="color:#4CAF50;">Drishti Sharma</span></h1>
-<h3 align="center">💻 Passionate Learner | 🐧 Linux Enthusiast | 🌱 Developer from Dehradun</h3>
+# 👩‍💻 Drishti Sharma
+
+**Computer Science Student | Aspiring Software Developer**
+*C • Python • Linux*
 
 ---
 
-### 📫 About Me  
-- 🏠 From **Dehradun, India**  
-- ✉️ Reach me at: **[20drishti06@gmail.com](mailto:20drishti06@gmail.com)**  
-- 🧠 Currently learning **Linux System Administration** & **C Programming**  
-- 💬 Ask me about **Linux**, **Shell scripting**, and **C fundamentals**  
-- ⚡ Fun fact: I love solving real-world problems through small automations!  
+## 👤 Profile
+
+I am a motivated Computer Science student with a strong interest in programming, problem-solving, and continuous learning. My work primarily focuses on C programming, Python development, and Linux fundamentals. This GitHub profile showcases my practice work, lab assignments, learning resources, and project ideas.
 
 ---
 
-## 🚀 Featured Repositories  
+## 🛠️ Technical Skills
 
-### 🐧 **Linux Learning & Scripting**
-| Repository | Description | Language |
-|-------------|-------------|-----------|
-| [LINUX_LEARNING](https://github.com/Drishti06Sharma/LINUX_LEARNING) | 📘 Learn Linux from basics to advanced through Q&A and practice sets. | 🐚 Shell |
-| [LINUX](https://github.com/Drishti06Sharma/LINUX) | ⚙️ Hands-on Linux scripts & configuration practice. | 🐚 Shell |
-
----
-
-### 💻 **Programming & Practice**
-| Repository | Description | Language |
-|-------------|-------------|-----------|
-| [100-days-of-code](https://github.com/Drishti06Sharma/100-days-of-code) | 💪 My journey of consistent coding and problem-solving! | 🧠 C |
+![C](https://img.shields.io/badge/C-Programming-blue?style=for-the-badge)
+![Python](https://img.shields.io/badge/Python-Programming-yellow?style=for-the-badge)
+![Linux](https://img.shields.io/badge/Linux-OS-black?style=for-the-badge)
+![Git](https://img.shields.io/badge/Git-Version_Control-red?style=for-the-badge)
+![GitHub](https://img.shields.io/badge/GitHub-Code_Hosting-lightgrey?style=for-the-badge)
 
 ---
 
-### 🧩 **Personal Repository**
-| Repository | Description | Language |
-|-------------|-------------|-----------|
-| [Drishti06Sharma](https://github.com/Drishti06Sharma/Drishti06Sharma) | 🏡 My GitHub profile repository — the central hub of all my projects! | 📄 Markdown |
+## 📂 Repositories
+
+### 🐍 Python
+
+* 🔗 [PYTHON (Private)](https://github.com/Drishti06Sharma/PYTHON)
+  Personal Python practice programs, exercises, and small experiments.
+
+* 🔗 [100-days-of-code (Public)](https://github.com/Drishti06Sharma/100-days-of-code)
+  Daily coding challenge solutions using Python and C to build consistency.
 
 ---
 
-### 🔒 **Private Projects**
-> Some of my ongoing and experimental projects that are still under development 👇  
+### 💻 C Programming
 
-| Repository | Description | Status |
-|-------------|-------------|--------|
-| 🧠 **PROJECT-IDEAS..** | 💡 A private collection of unique project ideas, upcoming concepts, and prototypes in progress. | 🔐 Private |
+* 🔗 [Drishti06Sharma (Public)](https://github.com/Drishti06Sharma/Drishti06Sharma)
+  Core C programs, logic-building exercises, and practice problems.
 
----
-
-## 🧠 Tech Stack
-**Languages:**  
-`C` • `Shell Scripting` • `HTML` • `CSS` • `JavaScript`  
-
-**Tools & Platforms:**  
-`Linux` • `Git` • `VS Code` • `Terminal`  
+* 🔗 [C_LAB_FILES (Public)](https://github.com/Drishti06Sharma/C_LAB_FILES)
+  College lab assignments and academic C programs.
 
 ---
 
+### 🐧 Linux & Shell Scripting
 
-## 🌐 Connect With Me  
+* 🔗 [LINUX (Public)](https://github.com/Drishti06Sharma/LINUX)
+  Linux commands practice and basic shell scripting examples.
 
-<p align="center">
-  <a href="mailto:20drishti06@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"></a>
-  <a href="https://github.com/Drishti06Sharma"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a>
-  <a href="#"><img src="https://img.shields.io/badge/Dehradun🌄-Location-green?style=for-the-badge"></a>
-</p>
+* 🔗 [Linux_Learning (Public)](https://github.com/Drishti06Sharma/Linux_Learning)
+  Question-based repository to learn Linux from basic to advanced level.
 
 ---
 
-> ✨ “Every great developer you know started as a beginner who never gave up.” ✨
-```
+### 🚧 Project Ideas
 
+* 🔗 [PROJECT-IDEAS.. (Private)](https://github.com/Drishti06Sharma/PROJECT-IDEAS..)
+  Collection of future software project ideas and concepts.
+
+---
+
+## 📈 Current Focus
+
+* 📌 Strengthening programming fundamentals
+* 🧠 Practicing problem-solving regularly
+* 🛠️ Building small projects
+
+---
+
+## 🎯 Career Goals
+
+* Become a skilled software developer
+* Master Data Structures & Algorithms
+* Build real-world applications
+* Contribute to open-source projects
+
+---
+
+## 📊 GitHub Stats
+
+![Drishti's GitHub Stats](https://github-readme-stats.vercel.app/api?username=Drishti06Sharma\&show_icons=true)
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Drishti06Sharma\&layout=compact)
+
+---
+
+✨ Thank you for visiting my profile. Feel free to explore my repositories and connect!
 
