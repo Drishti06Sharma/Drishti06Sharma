@@ -1,29 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Bat-Valentine</title>
+    <title>Haunted Love Quest</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="container">
-    <h1>🦇 Will You Be My Batman? ❤️</h1>
 
-    <img src="https://i.imgur.com/oYiTqum.png" class="batman">
+<h1>🖤 The Haunted Love Quest ❤️</h1>
 
-    <p>You make my heart go crazy </p>
+<p id="story">
+Solve my riddles and reach my heart...
+</p>
 
+<p id="riddle">
+I have a heart that never beats,  
+I have a home but I never sleep.  
+What am I?
+</p>
 
-    <div class="buttons">
-        <button id="yesBtn">YES</button>
-        <button id="noBtn">NO</button>
-    </div>
+<input type="text" id="answer" placeholder="Your answer...">
+<br>
+<button onclick="checkAnswer()">Submit</button>
 
-    <h2 id="message"></h2>
+<p id="result"></p>
+
 </div>
 
 <script src="script.js"></script>
+
 </body>
 </html>
 
