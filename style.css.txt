@@ -1,0 +1,51 @@
+body {
+    background: radial-gradient(circle, #0a0a0a, #000000);
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    color: white;
+    height: 100vh;
+}
+
+.container {
+    margin-top: 60px;
+}
+
+h1 {
+    color: crimson;
+    font-size: 40px;
+}
+
+p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.batman {
+    width: 220px;
+    margin: 20px 0;
+}
+
+.buttons button {
+    padding: 15px 35px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+#yesBtn {
+    background-color: crimson;
+    color: white;
+}
+
+#noBtn {
+    background-color: gray;
+    color: white;
+    position: absolute;
+}
+
+#message {
+    margin-top: 30px;
+    color: pink;
+}
