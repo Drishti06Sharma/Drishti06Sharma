@@ -1,35 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Haunted Love Quest</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Haunted Love Quest</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <div class="container">
 
-<h1>🖤 The Haunted Love Quest ❤️</h1>
+<h1>🖤 Mrs. Busy’s Haunted Love Quest 🖤</h1>
 
-<p id="story">
-Solve my riddles and reach my heart...
-</p>
+<p id="riddle"></p>
 
-<p id="riddle">
-I have a heart that never beats,  
-I have a home but I never sleep.  
-What am I?
-</p>
+<input type="text" id="answer" placeholder="Type here...">
+<br><br>
 
-<input type="text" id="answer" placeholder="Your answer...">
-<br>
 <button onclick="checkAnswer()">Submit</button>
 
 <p id="result"></p>
 
 </div>
 
-<script src="script.js"></script>
+<audio id="heartbeat" src="heartbeat.mp3" loop></audio>
+<audio id="voice" src="valentine.mp3"></audio>
 
+<script src="script.js"></script>
 </body>
 </html>
-
