@@ -1,14 +1,39 @@
-const yesBtn = document.getElementById("yesBtn");
-const noBtn = document.getElementById("noBtn");
-const message = document.getElementById("message");
+let step = 1;
 
-yesBtn.addEventListener("click", () => {
-    message.innerHTML = "🖤 YAY! You are my forever Bat-Valentine! ❤️";
-});
+function checkAnswer() {
+    const ans = document.getElementById("answer").value.toLowerCase();
+    const riddle = document.getElementById("riddle");
+    const result = document.getElementById("result");
 
-noBtn.addEventListener("mouseover", () => {
-    const x = Math.random() * (window.innerWidth - 100);
-    const y = Math.random() * (window.innerHeight - 100);
-    noBtn.style.left = x + "px";
-    noBtn.style.top = y + "px";
-});
+    if (step === 1 && ans === "a house") {
+        riddle.innerHTML = 
+        "I speak without a mouth and hear without ears. What am I?";
+        result.innerHTML = "Correct... 🩸";
+        step++;
+    }
+
+    else if (step === 2 && ans === "echo") {
+        riddle.innerHTML = 
+        "The more you take, the more you leave behind. What am I?";
+        result.innerHTML = "You're good at this... 🖤";
+        step++;
+    }
+
+    else if (step === 3 && ans === "footsteps") {
+        riddle.innerHTML = 
+        "One last question... Will you be my Valentine? (yes/no)";
+        result.innerHTML = "Final door unlocked... ❤️";
+        step++;
+    }
+
+    else if (step === 4 && ans === "yes") {
+        riddle.innerHTML = "🖤 YOU ARE MY VALENTINE FOREVER ❤️";
+        result.innerHTML = "I knew you'd say yes 😍";
+    }
+
+    else {
+        result.innerHTML = "Wrong answer... try again 😈";
+    }
+
+    document.getElementById("answer").value = "";
+}
