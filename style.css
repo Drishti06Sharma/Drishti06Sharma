@@ -1,8 +1,8 @@
 body {
-    background: radial-gradient(circle, #0a0a0a, #000000);
-    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1a0000, #330000, #0d0d0d);
+    font-family: 'Georgia', serif;
     text-align: center;
-    color: white;
+    color: #ffd1dc;
     height: 100vh;
 }
 
@@ -11,42 +11,39 @@ body {
 }
 
 h1 {
-    color: crimson;
+    color: #ff4d6d;
     font-size: 40px;
+    text-shadow: 0 0 10px crimson;
 }
 
 p {
     font-size: 20px;
-    margin-bottom: 30px;
 }
 
-.batman {
-    width: 220px;
-    margin: 20px 0;
-}
-
-.buttons button {
-    padding: 15px 35px;
-    font-size: 18px;
+input {
+    padding: 10px;
+    border-radius: 8px;
     border: none;
-    border-radius: 10px;
-    margin: 10px;
-    cursor: pointer;
+    font-size: 16px;
 }
 
-#yesBtn {
+button {
+    padding: 12px 30px;
     background-color: crimson;
     color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 15px;
 }
 
-#noBtn {
-    background-color: gray;
-    color: white;
-    position: absolute;
+button:hover {
+    background-color: darkred;
 }
 
-#message {
-    margin-top: 30px;
-    color: pink;
+#result {
+    margin-top: 20px;
+    font-size: 22px;
 }
 
