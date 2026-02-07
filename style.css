@@ -1,30 +1,79 @@
 body {
   margin: 0;
-  height: 100vh;
-  background: linear-gradient(135deg, #fff1c1, #ffe4e9);
   font-family: 'Georgia', serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background: linear-gradient(135deg, #fff7cc, #ffe0e9);
+  height: 100vh;
+  overflow: hidden;
 }
 
-.container {
-  width: 80%;
-  max-width: 600px;
-  text-align: center;
-}
-
-.text {
+.screen {
   display: none;
-  font-size: 1.6rem;
-  color: #5a3e2b;
-  line-height: 1.6;
-  opacity: 0;
-  transition: opacity 1.5s ease;
+  height: 100vh;
+  text-align: center;
+  padding: 60px 30px;
 }
 
-.text.active {
+.screen.active {
   display: block;
-  opacity: 1;
+  animation: fadeIn 1.5s ease;
 }
 
+h1 {
+  font-size: 2.2rem;
+  color: #7a4a2e;
+}
+
+p {
+  font-size: 1.3rem;
+  color: #5a3e2b;
+  margin-top: 20px;
+}
+
+button {
+  margin-top: 40px;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 25px;
+  background: #f4c2c2;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #f2a7b1;
+}
+
+.shayari {
+  font-style: italic;
+  line-height: 1.7;
+}
+
+.soft {
+  font-size: 1.1rem;
+  margin-top: 25px;
+}
+
+.bouquet {
+  font-size: 3rem;
+  margin-top: 30px;
+  animation: popUp 1.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes popUp {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
