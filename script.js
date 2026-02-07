@@ -1,12 +1,10 @@
-const texts = document.querySelectorAll(".text");
-let index = 0;
+let current = 0;
+const screens = document.querySelectorAll(".screen");
 
-setInterval(() => {
-  texts[index].classList.remove("active");
-  index++;
-
-  if (index < texts.length) {
-    texts[index].classList.add("active");
+function nextScreen() {
+  screens[current].classList.remove("active");
+  current++;
+  if (current < screens.length) {
+    screens[current].classList.add("active");
   }
-}, 3500);
-
+}
