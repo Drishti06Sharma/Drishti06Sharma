@@ -1,37 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>For You</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>For My Rose 🌹</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Georgia", serif;
+}
+
+body {
+  background: linear-gradient(#fff1ea, #ffe4ec);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.page {
+  display: none;
+  max-width: 700px;
+  padding: 40px;
+}
+
+.page.active {
+  display: block;
+}
+
+h1 {
+  font-size: 38px;
+  color: #7a3e2e;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 22px;
+  color: #6a3a2c;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+button {
+  margin-top: 30px;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 30px;
+  background: #f4b6c2;
+  color: #4a1f1f;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #e89aa8;
+}
+
+/* 🌸 Bouquet */
+.bouquet {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.flower {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  position: relative;
+  opacity: 0;
+  animation: bloom 1.5s ease forwards;
+}
+
+.jasmine { background: #fff; }
+.rose { background: #ff6b81; }
+
+.flower::before,
+.flower::after {
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: inherit;
+}
+
+.flower::before { top: -14px; }
+.flower::after { left: 14px; }
+
+.flower:nth-child(1){animation-delay:.3s}
+.flower:nth-child(2){animation-delay:.6s}
+.flower:nth-child(3){animation-delay:.9s}
+.flower:nth-child(4){animation-delay:1.2s}
+.flower:nth-child(5){animation-delay:1.5s}
+
+@keyframes bloom {
+  to { opacity: 1; transform: scale(1.1); }
+}
+
+/* 👁️ Eye image */
+.eye {
+  width: 260px;
+  border-radius: 25px;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* 💌 Final text */
+.final {
+  font-size: 32px;
+  color: #7a2e3a;
+}
+</style>
 </head>
+
 <body>
 
-<div class="container">
-
-  <!-- Eyes Image -->
-  <img src="eyes.jpeg" class="eyes" alt="His Eyes">
-
-  <!-- Shayari -->
-  <div class="shayari">
-    <p>Jam par jam pine se kya fayda,</p>
-    <p>jam par jam pine se kya fayda,</p>
-    <p>subha tak sab utar jaayegi…</p>
-    <p>humne tumhari aankhon se pi hai,</p>
-    <p>khuda ki kasam,</p>
-    <p>sari umar nashe mein nikal jaayegi 💖</p>
-  </div>
-
-  <!-- Jasmine Bouquet -->
-  <div class="bouquet">
-    <span>🌼</span><span>🌼</span><span>🌼</span>
-    <span>🌼</span><span>🌼</span><span>🌼</span>
-  </div>
-
+<!-- PAGE 1 -->
+<div class="page active">
+  <h1>Everyone is celebrating Rose Day 🌹</h1>
+  <p>But my rose is so far away,</p>
+  <p>so I made something special for you…</p>
+  <button onclick="nextPage()">Next</button>
 </div>
 
-<script src="script.js"></script>
+<!-- PAGE 2 -->
+<div class="page">
+  <h1>A bouquet, just for you 🤍</h1>
+  <div class="bouquet">
+    <div class="flower jasmine"></div>
+    <div class="flower rose"></div>
+    <div class="flower jasmine"></div>
+    <div class="flower rose"></div>
+    <div class="flower jasmine"></div>
+  </div>
+  <button onclick="nextPage()">Next</button>
+</div>
+
+<!-- PAGE 3 -->
+<div class="page">
+  <img src="eye.jpg" class="eye">
+  <p>Jam par jam pine se kya fayda,</p>
+  <p>subha tak sab utar jaayegi…</p>
+  <p>Humne tumhari aankhon se pi hai,</p>
+  <p>khuda ki kasam,</p>
+  <p>sari umar nashe mein nikal jaayegi 💖</p>
+  <button onclick="nextPage()">Next</button>
+</div>
+
+<!-- PAGE 4 -->
+<div class="page">
+  <p class="final">
+    I love you so much meri jaan 💖<br>
+    hamesha haste raho
+  </p>
+</div>
+
+<script>
+let current = 0;
+const pages = document.querySelectorAll(".page");
+
+function nextPage() {
+  pages[current].classList.remove("active");
+  current++;
+  pages[current].classList.add("active");
+}
+</script>
+
 </body>
 </html>
-
 
