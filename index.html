@@ -1,203 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>For You 🤍</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Rose Day My Love</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins:wght@300;400&display=swap');
 
-<style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Georgia", serif;
-}
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #ffe4e1;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            text-align: center;
+            color: #5d4037;
+        }
 
-body {
-  background: #fdeee7;
-  height: 100vh;
-  overflow: hidden;
-}
+        /* Falling Petals Effect */
+        .petal {
+            position: absolute;
+            top: -10%;
+            background-color: #ff4d4d;
+            border-radius: 150% 0 150% 0;
+            opacity: 0.7;
+            pointer-events: none;
+            animation: fall linear infinite;
+        }
 
-.page {
-  display: none;
-  height: 100vh;
-  width: 100%;
-  padding: 40px;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
+        @keyframes fall {
+            0% { transform: translateY(0vh) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+        }
 
-.page.active {
-  display: flex;
-}
+        .page {
+            display: none;
+            padding: 20px;
+            max-width: 500px;
+            animation: fadeIn 1s ease-in;
+            position: relative;
+            z-index: 10;
+        }
 
-h1 {
-  color: #7a4a2e;
-  font-size: 2.4rem;
-  margin-bottom: 20px;
-}
+        .active { display: block; }
 
-p {
-  color: #7a4a2e;
-  font-size: 1.3rem;
-  line-height: 1.8;
-}
+        h1 { font-family: 'Dancing Script', cursive; font-size: 2.5rem; color: #b03a2e; margin-bottom: 10px; }
+        
+        .bouquet-container { 
+            margin: 20px auto; 
+            position: relative; 
+            width: 150px; 
+            height: 200px; 
+            animation: heartBeat 1.5s infinite; 
+        }
+        .flower { width: 40px; height: 40px; border-radius: 50%; position: absolute; border: 2px solid rgba(255,255,255,0.3); }
+        .rose-fl { background: radial-gradient(circle, #ff4d4d, #b03a2e); }
+        .jasmine-fl { background: radial-gradient(circle, #ffffff, #e0e0e0); }
+        .stem { width: 5px; height: 100px; background: #4a7c44; position: absolute; bottom: 0; left: 72px; }
 
-button {
-  margin-top: 40px;
-  padding: 14px 36px;
-  border: none;
-  border-radius: 30px;
-  background: #f4b6c2;
-  color: #5a2d1a;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: 0.3s;
-}
+        .eye-img {
+            width: 95%;
+            max-width: 350px;
+            border-radius: 20px;
+            border: 6px solid #fff;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+            margin-bottom: 15px;
+        }
 
-button:hover {
-  background: #f19aa8;
-}
+        .shayri { 
+            font-family: 'Dancing Script', cursive; 
+            font-size: 1.3rem; 
+            color: #7b1f16; 
+            line-height: 1.6; 
+            font-weight: bold;
+            background: rgba(255, 255, 255, 0.3);
+            padding: 15px;
+            border-radius: 15px;
+        }
 
-/* Bouquet */
-.bouquet {
-  display: flex;
-  gap: 22px;
-  margin-top: 40px;
-}
+        button {
+            margin-top: 25px;
+            padding: 12px 40px;
+            background-color: #f8bbd0;
+            border: none;
+            border-radius: 30px;
+            color: #5d4037;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 1rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
 
-.stem {
-  width: 6px;
-  height: 100px;
-  background: #6fa56f;
-  position: relative;
-  border-radius: 4px;
-  opacity: 0;
-  animation: grow 1.4s forwards;
-}
+        button:hover { background-color: #f48fb1; transform: scale(1.05); }
 
-.stem::before {
-  content: "";
-  position: absolute;
-  top: -20px;
-  left: -14px;
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-}
-
-.jasmine::before {
-  background: white;
-}
-
-.rose::before {
-  background: #ff6b81;
-}
-
-.stem:nth-child(1){animation-delay:.2s}
-.stem:nth-child(2){animation-delay:.4s}
-.stem:nth-child(3){animation-delay:.6s}
-.stem:nth-child(4){animation-delay:.8s}
-.stem:nth-child(5){animation-delay:1s}
-
-@keyframes grow {
-  to {
-    opacity: 1;
-    transform: translateY(-12px);
-  }
-}
-
-/* Eye */
-.eye {
-  width: 260px;
-  border-radius: 20px;
-  box-shadow: 0 12px 40px rgba(0,0,0,0.2);
-  margin-bottom: 30px;
-}
-
-/* Shayari */
-.shayari p {
-  font-style: italic;
-  margin: 6px 0;
-}
-
-/* Final page */
-.final {
-  font-size: 2rem;
-}
-</style>
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes heartBeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.08); }
+        }
+    </style>
 </head>
-
 <body>
 
-<audio id="heartbeat" src="heartbeat.mp3" loop></audio>
+    <audio id="heartbeat-audio" loop>
+        <source src="https://www.soundjay.com/human/heartbeat-01a.mp3" type="audio/mpeg">
+    </audio>
 
-<!-- PAGE 1 -->
-<div class="page active">
-  <h1>Everyone is celebrating Rose Day 🌹</h1>
-  <p>
-    But my rose is so far away… <br>
-    so I made something special, just for you.
-  </p>
-  <button onclick="nextPage()">Next</button>
-</div>
+    <div id="page1" class="page active">
+        <h1>Everyone is celebrating Rose Day...</h1>
+        <p>but my rose is so far away 🌹</p>
+        <p>so I made something a little special... <br> just for you 💖</p>
+        <button onclick="startExperience()">Open Your Gift</button>
+    </div>
 
-<!-- PAGE 2 -->
-<div class="page">
-  <h1>A bouquet, just for you 🤍</h1>
+    <div id="page2" class="page">
+        <h1>A bouquet, just for you 🤍</h1>
+        <div class="bouquet-container">
+            <div class="stem"></div>
+            <div class="flower rose-fl" style="top: 10px; left: 55px;"></div>
+            <div class="flower rose-fl" style="top: 40px; left: 85px;"></div>
+            <div class="flower rose-fl" style="top: 70px; left: 60px;"></div>
+            <div class="flower jasmine-fl" style="top: 30px; left: 25px;"></div>
+            <div class="flower jasmine-fl" style="top: 70px; left: 30px;"></div>
+        </div>
+        <p><strong>Roses</strong> for my love 🌹<br><strong>Jasmine</strong> for your calm soul 🤍</p>
+        <button onclick="nextPage(3)">Next</button>
+    </div>
 
-  <div class="bouquet">
-    <div class="stem jasmine"></div>
-    <div class="stem rose"></div>
-    <div class="stem jasmine"></div>
-    <div class="stem rose"></div>
-    <div class="stem jasmine"></div>
-  </div>
+    <div id="page3" class="page">
+        <img src="eyes.jpeg" alt="His Eyes" class="eye-img">
+        <div class="shayri">
+            Jam par jam pine se kya fayda,<br>
+            jam par jam pine se kya fayda,<br>
+            subha tk sb utr jaeygi..<br>
+            humne tumhari ankhon se pi hai..<br>
+            khuda ki kasam sari umar nashe mein nikal jayegi 💖
+        </div>
+        <button onclick="nextPage(4)">Next</button>
+    </div>
 
-  <button onclick="nextPage()">Next</button>
-</div>
+    <div id="page4" class="page">
+        <h1>I love you so much meri jaan ❤️</h1>
+        <p style="font-size: 1.5rem; color: #b03a2e; font-weight: bold;">hmesha hste raho .. ✨</p>
+        <button onclick="location.reload()">See again</button>
+    </div>
 
-<!-- PAGE 3 -->
-<div class="page">
-  <img src="eyes.jpeg" class="eye">
+    <script>
+        function startExperience() {
+            const audio = document.getElementById('heartbeat-audio');
+            audio.play().catch(e => console.log("Audio waiting for interaction"));
+            createPetals();
+            nextPage(2);
+        }
 
-  <div class="shayari">
-    <p>Jam par jam pine se kya fayda,</p>
-    <p>subha tak sab utar jaayegi…</p>
-    <p>Humne tumhari aankhon se pi hai,</p>
-    <p>khuda ki kasam,</p>
-    <p>sari umar nashe mein nikal jaayegi 💖</p>
-  </div>
+        function nextPage(pageNumber) {
+            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+            document.getElementById('page' + pageNumber).classList.add('active');
+        }
 
-  <button onclick="nextPage()">Next</button>
-</div>
-
-<!-- PAGE 4 -->
-<div class="page">
-  <p class="final">
-    I love you so much meri jaan 🤍<br>
-    hamesha haste raho.
-  </p>
-</div>
-
-<script>
-let current = 0;
-const pages = document.querySelectorAll(".page");
-const sound = document.getElementById("heartbeat");
-
-function nextPage() {
-  pages[current].classList.remove("active");
-  current++;
-  pages[current].classList.add("active");
-
-  if (current === 1) {
-    sound.volume = 0.25;
-    sound.play();
-  }
-}
+        function createPetals() {
+            setInterval(() => {
+                let petal = document.createElement('div');
+                petal.className = 'petal';
+                petal.style.left = Math.random() * 100 + 'vw';
+                let size = Math.random() * 15 + 10 + 'px';
+                petal.style.width = size;
+                petal.style.height = size;
+                petal.style.animationDuration = Math.random() * 3 + 3 + 's';
+                document.body.appendChild(petal);
+                
+                setTimeout(() => { petal.remove(); }, 6000);
+            }, 300);
+        }
+    </script>
+</body>
+</html>
 </script>
 
 </body>
 </html>
+
