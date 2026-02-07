@@ -1,11 +1,8 @@
-let current = 0;
-const screens = document.querySelectorAll(".screen");
+const lines = document.querySelectorAll(".shayari p");
 
-function nextScreen() {
-  screens[current].classList.remove("active");
-  current++;
-
-  if (current < screens.length) {
-    screens[current].classList.add("active");
-  }
-}
+lines.forEach((line, index) => {
+  setTimeout(() => {
+    line.style.opacity = 1;
+    line.style.transition = "opacity 1.5s ease";
+  }, index * 1400);
+});
