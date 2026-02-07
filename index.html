@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>For My Rose 🌹</title>
+<title>For You 🤍</title>
 
 <style>
 * {
@@ -13,166 +13,191 @@
 }
 
 body {
-  background: linear-gradient(#fff1ea, #ffe4ec);
+  background: #fdeee7;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  overflow: hidden;
 }
 
 .page {
   display: none;
-  max-width: 700px;
+  height: 100vh;
+  width: 100%;
   padding: 40px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .page.active {
-  display: block;
+  display: flex;
 }
 
 h1 {
-  font-size: 38px;
-  color: #7a3e2e;
+  color: #7a4a2e;
+  font-size: 2.4rem;
   margin-bottom: 20px;
 }
 
 p {
-  font-size: 22px;
-  color: #6a3a2c;
-  margin-bottom: 15px;
-  line-height: 1.6;
+  color: #7a4a2e;
+  font-size: 1.3rem;
+  line-height: 1.8;
 }
 
 button {
-  margin-top: 30px;
-  padding: 12px 28px;
+  margin-top: 40px;
+  padding: 14px 36px;
   border: none;
   border-radius: 30px;
   background: #f4b6c2;
-  color: #4a1f1f;
-  font-size: 18px;
+  color: #5a2d1a;
+  font-size: 1rem;
   cursor: pointer;
   transition: 0.3s;
 }
 
 button:hover {
-  background: #e89aa8;
+  background: #f19aa8;
 }
 
-/* 🌸 Bouquet */
+/* Bouquet */
 .bouquet {
   display: flex;
-  justify-content: center;
-  gap: 25px;
+  gap: 22px;
   margin-top: 40px;
 }
 
-.flower {
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
+.stem {
+  width: 6px;
+  height: 100px;
+  background: #6fa56f;
   position: relative;
+  border-radius: 4px;
   opacity: 0;
-  animation: bloom 1.5s ease forwards;
+  animation: grow 1.4s forwards;
 }
 
-.jasmine { background: #fff; }
-.rose { background: #ff6b81; }
-
-.flower::before,
-.flower::after {
+.stem::before {
   content: "";
   position: absolute;
-  width: 26px;
-  height: 26px;
+  top: -20px;
+  left: -14px;
+  width: 34px;
+  height: 34px;
   border-radius: 50%;
-  background: inherit;
 }
 
-.flower::before { top: -14px; }
-.flower::after { left: 14px; }
-
-.flower:nth-child(1){animation-delay:.3s}
-.flower:nth-child(2){animation-delay:.6s}
-.flower:nth-child(3){animation-delay:.9s}
-.flower:nth-child(4){animation-delay:1.2s}
-.flower:nth-child(5){animation-delay:1.5s}
-
-@keyframes bloom {
-  to { opacity: 1; transform: scale(1.1); }
+.jasmine::before {
+  background: white;
 }
 
-/* 👁️ Eye image */
+.rose::before {
+  background: #ff6b81;
+}
+
+.stem:nth-child(1){animation-delay:.2s}
+.stem:nth-child(2){animation-delay:.4s}
+.stem:nth-child(3){animation-delay:.6s}
+.stem:nth-child(4){animation-delay:.8s}
+.stem:nth-child(5){animation-delay:1s}
+
+@keyframes grow {
+  to {
+    opacity: 1;
+    transform: translateY(-12px);
+  }
+}
+
+/* Eye */
 .eye {
   width: 260px;
-  border-radius: 25px;
+  border-radius: 20px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.2);
   margin-bottom: 30px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
 
-/* 💌 Final text */
+/* Shayari */
+.shayari p {
+  font-style: italic;
+  margin: 6px 0;
+}
+
+/* Final page */
 .final {
-  font-size: 32px;
-  color: #7a2e3a;
+  font-size: 2rem;
 }
 </style>
 </head>
 
 <body>
 
+<audio id="heartbeat" src="heartbeat.mp3" loop></audio>
+
 <!-- PAGE 1 -->
 <div class="page active">
   <h1>Everyone is celebrating Rose Day 🌹</h1>
-  <p>But my rose is so far away,</p>
-  <p>so I made something special for you…</p>
+  <p>
+    But my rose is so far away… <br>
+    so I made something special, just for you.
+  </p>
   <button onclick="nextPage()">Next</button>
 </div>
 
 <!-- PAGE 2 -->
 <div class="page">
   <h1>A bouquet, just for you 🤍</h1>
+
   <div class="bouquet">
-    <div class="flower jasmine"></div>
-    <div class="flower rose"></div>
-    <div class="flower jasmine"></div>
-    <div class="flower rose"></div>
-    <div class="flower jasmine"></div>
+    <div class="stem jasmine"></div>
+    <div class="stem rose"></div>
+    <div class="stem jasmine"></div>
+    <div class="stem rose"></div>
+    <div class="stem jasmine"></div>
   </div>
+
   <button onclick="nextPage()">Next</button>
 </div>
 
 <!-- PAGE 3 -->
 <div class="page">
-  <img src="eye.jpeg" class="eye">
-  <p>Jam par jam pine se kya fayda,</p>
-  <p>subha tak sab utar jaayegi…</p>
-  <p>Humne tumhari aankhon se pi hai,</p>
-  <p>khuda ki kasam,</p>
-  <p>sari umar nashe mein nikal jaayegi 💖</p>
+  <img src="eyes.jpeg" class="eye">
+
+  <div class="shayari">
+    <p>Jam par jam pine se kya fayda,</p>
+    <p>subha tak sab utar jaayegi…</p>
+    <p>Humne tumhari aankhon se pi hai,</p>
+    <p>khuda ki kasam,</p>
+    <p>sari umar nashe mein nikal jaayegi 💖</p>
+  </div>
+
   <button onclick="nextPage()">Next</button>
 </div>
 
 <!-- PAGE 4 -->
 <div class="page">
   <p class="final">
-    I love you so much meri jaan 💖<br>
-    hamesha haste raho
+    I love you so much meri jaan 🤍<br>
+    hamesha haste raho.
   </p>
 </div>
 
 <script>
 let current = 0;
 const pages = document.querySelectorAll(".page");
+const sound = document.getElementById("heartbeat");
 
 function nextPage() {
   pages[current].classList.remove("active");
   current++;
   pages[current].classList.add("active");
+
+  if (current === 1) {
+    sound.volume = 0.25;
+    sound.play();
+  }
 }
 </script>
 
 </body>
 </html>
-
-
