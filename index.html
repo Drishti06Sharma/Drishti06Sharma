@@ -21,7 +21,7 @@
             color: #5d4037;
         }
 
-        /* --- PETALS --- */
+        /* --- FALLING PETALS --- */
         .petal {
             position: fixed;
             top: -50px;
@@ -31,83 +31,104 @@
             pointer-events: none;
             z-index: 9999;
             animation: fall linear forwards;
-            box-shadow: 0 0 5px rgba(255, 77, 77, 0.5);
         }
 
         @keyframes fall {
-            0% { transform: translateY(0vh) rotate(0deg) translateX(0); opacity: 1; }
-            100% { transform: translateY(110vh) rotate(360deg) translateX(50px); opacity: 0; }
+            0% { transform: translateY(0vh) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
         }
 
         .page {
             display: none;
             padding: 20px;
             max-width: 500px;
-            animation: fadeIn 1s ease-in;
+            animation: fadeIn 0.8s ease-in;
             position: relative;
             z-index: 10;
         }
 
         .active { display: block; }
 
-        h1 { font-family: 'Dancing Script', cursive; font-size: 2.8rem; color: #b03a2e; margin-bottom: 10px; }
+        h1 { font-family: 'Dancing Script', cursive; font-size: 3rem; color: #b03a2e; margin-bottom: 20px; }
         
         .shayri { 
             font-family: 'Dancing Script', cursive; 
-            font-size: 1.5rem; 
+            font-size: 1.6rem; 
             color: #7b1f16; 
-            line-height: 1.6; 
+            line-height: 1.8; 
             font-weight: bold;
-            background: rgba(255, 255, 255, 0.6);
-            padding: 25px;
+            background: rgba(255, 255, 255, 0.5);
+            padding: 30px;
             border-radius: 20px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
         }
 
         .btn-container {
-            margin-top: 30px;
+            margin-top: 40px;
             display: flex;
             justify-content: center;
+            align-items: center;
             gap: 20px;
-            position: relative;
-            height: 60px;
+            min-height: 100px;
         }
 
         button {
-            padding: 12px 40px;
+            padding: 15px 45px;
             background-color: #ff4d4d;
             border: none;
-            border-radius: 30px;
+            border-radius: 50px;
             color: white;
             font-weight: bold;
             cursor: pointer;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            transition: transform 0.2s;
         }
 
-        button:hover { transform: scale(1.1); }
-
+        /* The Elusive No Button */
         #noBtn {
-            background-color: #999;
-            position: absolute;
-            z-index: 10000;
+            background-color: #777;
+            position: absolute; 
+            transition: all 0.15s ease-out;
         }
 
-        /* Success Message Styling */
-        #success-msg {
+        /* --- THE FINAL I LOVE YOU POPUP --- */
+        #final-popup {
             display: none;
             position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: white;
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 0 50px rgba(176, 58, 46, 0.3);
-            z-index: 20000;
-            width: 80%;
-            max-width: 400px;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 228, 225, 0.95);
+            z-index: 100000;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            animation: zoomIn 0.5s ease-out;
+        }
+
+        .heart {
+            font-size: 100px;
+            color: #ff4d4d;
+            animation: pulse 1s infinite;
+        }
+
+        .ily-text {
+            font-family: 'Dancing Script', cursive;
+            font-size: 4.5rem;
+            color: #b03a2e;
+            margin-top: 20px;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes zoomIn {
+            from { opacity: 0; transform: scale(0.5); }
+            to { opacity: 1; transform: scale(1); }
         }
 
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
@@ -117,29 +138,32 @@
 
     <div id="page1" class="page active">
         <h1>I have something to tell you...</h1>
+        <button onclick="nextPage(2)">What is it? ❤️</button>
+    </div>
+
+    <div id="page2" class="page">
         <div class="shayri">
             Dil ki sab gehraiyo ke sath,<br>
             mein ikrar krta hu...<br>
             mein tumse pyaar krta hu,<br>
             mein tumse pyaar krta hu.. ❤️
         </div>
-        <button onclick="nextPage(2)">Next</button>
+        <button onclick="nextPage(3)" style="margin-top: 20px;">Next ✨</button>
     </div>
 
-    <div id="page2" class="page">
-        <h1>My Dear Life,</h1>
-        <p style="font-size: 1.4rem;">Will you be my Valentine? 🌹</p>
-        
+    <div id="page3" class="page">
+        <h1>Will you be my Valentine? 🌹</h1>
         <div class="btn-container">
-            <button id="yesBtn" onclick="showSuccess()">YES!</button>
+            <button id="yesBtn" onclick="showFinalPopup()">YES!</button>
             <button id="noBtn" onmouseover="moveButton()">No</button>
         </div>
     </div>
 
-    <div id="success-msg">
-        <h1 style="font-size: 2rem;">Yayyy! ❤️</h1>
-        <p>I love you so much meri jaan! You've made me the happiest person. 💖</p>
-        <button onclick="location.reload()">See My Love Again</button>
+    <div id="final-popup">
+        <div class="heart">❤️</div>
+        <div class="ily-text">I LOVE YOU!</div>
+        <p style="font-size: 1.2rem; color: #5d4037; margin-top: 10px;">Meri jaan, hamesha mere saath rehna. ✨</p>
+        <button onclick="location.reload()" style="margin-top: 30px; background: #5d4037;">See Again ❤️</button>
     </div>
 
     <script>
@@ -150,22 +174,28 @@
         function nextPage(pageNumber) {
             document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
             document.getElementById('page' + pageNumber).classList.add('active');
+            
+            // Positioning the No button properly when reaching page 3
+            if(pageNumber === 3) {
+                const noBtn = document.getElementById('noBtn');
+                noBtn.style.top = "50%";
+                noBtn.style.left = "60%";
+            }
         }
 
         function moveButton() {
             const btn = document.getElementById('noBtn');
-            // Generate random positions within the visible window
-            const x = Math.random() * (window.innerWidth - btn.offsetWidth);
-            const y = Math.random() * (window.innerHeight - btn.offsetHeight);
+            const padding = 100;
+            const x = Math.random() * (window.innerWidth - btn.offsetWidth - padding) + padding/2;
+            const y = Math.random() * (window.innerHeight - btn.offsetHeight - padding) + padding/2;
             
-            btn.style.left = x + 'px';
-            btn.style.top = y + 'px';
+            btn.style.left = x + "px";
+            btn.style.top = y + "px";
         }
 
-        function showSuccess() {
-            document.getElementById('success-msg').style.display = 'block';
-            // Stop the "No" button from moving if they somehow clicked it
-            document.getElementById('noBtn').style.display = 'none';
+        function showFinalPopup() {
+            const popup = document.getElementById('final-popup');
+            popup.style.display = 'flex';
         }
 
         function createPetals() {
@@ -178,7 +208,6 @@
                 petal.style.height = size;
                 petal.style.animationDuration = Math.random() * 3 + 4 + 's';
                 document.body.appendChild(petal);
-                
                 setTimeout(() => { petal.remove(); }, 7000);
             }, 400);
         }
