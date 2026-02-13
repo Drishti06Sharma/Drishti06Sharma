@@ -81,16 +81,17 @@
             cursor: pointer;
             font-size: 1.2rem;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            z-index: 1000;
         }
 
-        /* The Elusive No Button */
+        /* --- THE SLIDING NO BUTTON --- */
         #noBtn {
             background-color: #777;
             position: absolute; 
-            transition: all 0.15s ease-out;
+            /* This transition makes it SLIDE instead of jump */
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
         }
 
-        /* --- THE FINAL I LOVE YOU POPUP --- */
         #final-popup {
             display: none;
             position: fixed;
@@ -98,7 +99,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(255, 228, 225, 0.95);
+            background: rgba(255, 228, 225, 0.98);
             z-index: 100000;
             flex-direction: column;
             justify-content: center;
@@ -106,31 +107,11 @@
             animation: zoomIn 0.5s ease-out;
         }
 
-        .heart {
-            font-size: 100px;
-            color: #ff4d4d;
-            animation: pulse 1s infinite;
-        }
+        .heart { font-size: 100px; color: #ff4d4d; animation: pulse 1s infinite; }
+        .ily-text { font-family: 'Dancing Script', cursive; font-size: 4.5rem; color: #b03a2e; margin-top: 20px; }
 
-        .ily-text {
-            font-family: 'Dancing Script', cursive;
-            font-size: 4.5rem;
-            color: #b03a2e;
-            margin-top: 20px;
-            text-shadow: 2px 2px 10px rgba(0,0,0,0.1);
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.2); }
-            100% { transform: scale(1); }
-        }
-
-        @keyframes zoomIn {
-            from { opacity: 0; transform: scale(0.5); }
-            to { opacity: 1; transform: scale(1); }
-        }
-
+        @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.2); } }
+        @keyframes zoomIn { from { opacity: 0; transform: scale(0.5); } to { opacity: 1; transform: scale(1); } }
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
     </style>
 </head>
@@ -153,7 +134,7 @@
 
     <div id="page3" class="page">
         <h1>Will you be my Valentine? 🌹</h1>
-        <div class="btn-container">
+        <div class="btn-container" id="container">
             <button id="yesBtn" onclick="showFinalPopup()">YES!</button>
             <button id="noBtn" onmouseover="moveButton()">No</button>
         </div>
@@ -167,35 +148,37 @@
     </div>
 
     <script>
-        window.onload = function() {
-            createPetals();
-        };
+        window.onload = function() { createPetals(); };
 
         function nextPage(pageNumber) {
             document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
             document.getElementById('page' + pageNumber).classList.add('active');
             
-            // Positioning the No button properly when reaching page 3
             if(pageNumber === 3) {
                 const noBtn = document.getElementById('noBtn');
-                noBtn.style.top = "50%";
-                noBtn.style.left = "60%";
+                // Initial placement so it starts near the Yes button
+                noBtn.style.top = (window.innerHeight / 2 + 50) + "px";
+                noBtn.style.left = (window.innerWidth / 2 + 50) + "px";
             }
         }
 
         function moveButton() {
             const btn = document.getElementById('noBtn');
-            const padding = 100;
-            const x = Math.random() * (window.innerWidth - btn.offsetWidth - padding) + padding/2;
-            const y = Math.random() * (window.innerHeight - btn.offsetHeight - padding) + padding/2;
             
-            btn.style.left = x + "px";
-            btn.style.top = y + "px";
+            // Define boundaries so it doesn't slide off screen
+            const padding = 100;
+            const maxX = window.innerWidth - btn.offsetWidth - padding;
+            const maxY = window.innerHeight - btn.offsetHeight - padding;
+            
+            const randomX = Math.max(padding, Math.floor(Math.random() * maxX));
+            const randomY = Math.max(padding, Math.floor(Math.random() * maxY));
+            
+            btn.style.left = randomX + 'px';
+            btn.style.top = randomY + 'px';
         }
 
         function showFinalPopup() {
-            const popup = document.getElementById('final-popup');
-            popup.style.display = 'flex';
+            document.getElementById('final-popup').style.display = 'flex';
         }
 
         function createPetals() {
